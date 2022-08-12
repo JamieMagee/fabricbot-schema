@@ -1,0 +1,43 @@
+{
+  "$schema": "../../fabricbot.schema.json",
+  "version": "1.0",
+  "tasks": [
+    {
+      "taskType": "trigger",
+      "capabilityId": "AutoMerge",
+      "subCapability": "AutoMerge",
+      "version": "1.0",
+      "config": {
+        "taskName": "Auto Merge PRs",
+        "label": "auto-merge",
+        "minMinutesOpen": "60",
+        "mergeType": "squash",
+        "removeLabelOnPush": true,
+        "conditionalMergeTypes": [
+          {
+            "mergeType": "merge",
+            "condition": {
+              "placeholder": "labels",
+              "operator": "contains",
+              "label_name": "Type: Merge Forward :fast_forward:"
+            }
+          }
+        ],
+        "deleteBranches": true,
+        "silentMode": false,
+        "allowAutoMergeInstructionsWithoutLabel": false,
+        "enforceDMPAsStatus": false,
+        "usePrDescriptionAsCommitMessage": false
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "LabelSync",
+      "subCapability": "LabelSync",
+      "version": "1.0",
+      "id": "aaa",
+      "config": {
+      }
+    }
+  ]
+}
