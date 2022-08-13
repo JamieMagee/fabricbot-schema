@@ -1,6 +1,6 @@
 import { Type } from "@sinclair/typebox";
 
-const config = Type.Object({
+const Config = Type.Object({
   taskName: Type.String(),
   label: Type.String(),
   silentMode: Type.Boolean(),
@@ -67,6 +67,6 @@ export const AutoMergeSubCapability = Type.Object({
   taskType: Type.Literal("trigger"),
   capabilityId: Type.Literal("AutoMerge"),
   subCapability: Type.Literal("AutoMerge"),
-  version: Type.Union([Type.Literal("1.0")]),
-  config,
+  version: Type.Literal("1.0"),
+  config: Config,
 });
