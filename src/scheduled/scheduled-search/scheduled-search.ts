@@ -9,10 +9,10 @@ const searchTerm = Type.Union([
 
 const searchTerms = Type.Array(searchTerm);
 
-export const scheduledSearch = Type.Object({
+export const ScheduledSearchSubCapability = Type.Object({
   taskType: Type.Literal("scheduled"),
   capabilityId: Type.Literal("ScheduledSearch"),
-  subCapabilityId: Type.Literal("ScheduledSearch"),
+  subCapability: Type.Literal("ScheduledSearch"),
   version: Type.Union([Type.Literal("1.0")]),
   config: Type.Object({ searchTerms }),
 });
