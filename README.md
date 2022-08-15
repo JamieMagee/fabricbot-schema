@@ -15,7 +15,7 @@ Generate `fabricbot.schema.json` by running `npm run build`.
 
 ## Repository Layout
 
-```json
+```
 src
 ├── index.ts
 └── taskType
@@ -30,7 +30,9 @@ src
         └── subCapability2.ts
 ```
 
-where a `taskType` `index.ts` contains:
+### Tasktype
+
+Where a `taskType` `index.ts` contains:
 
 ```ts
 import { Type } from "@sinclair/typebox";
@@ -44,7 +46,9 @@ export const TaskType = Type.Union([
 ]);
 ```
 
-and a `capability` `index.ts` contains:
+### Capability
+
+And a `capability` `index.ts` contains:
 
 ```ts
 import { Type } from "@sinclair/typebox";
@@ -58,7 +62,9 @@ export const Capability1 = Type.Union([
 ]);
 ```
 
-and a `subCapability` contains:
+### subCapability
+
+And a `subCapability` contains:
 
 ```ts
 import { Type } from "@sinclair/typebox";
