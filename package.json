@@ -20,7 +20,7 @@
     "prettier": "2.7.1"
   },
   "devDependencies": {
-    "@tsconfig/node18-strictest-esm": "1.0.0",
+    "@tsconfig/node18-strictest-esm": "1.0.1",
     "@types/jest": "28.1.7",
     "@types/node": "18.7.3",
     "jest": "28.1.3",
