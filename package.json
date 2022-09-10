@@ -16,7 +16,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@sinclair/typebox": "0.24.39",
+    "@sinclair/typebox": "0.24.40",
     "prettier": "2.7.1"
   },
   "devDependencies": {
